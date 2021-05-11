@@ -9,19 +9,19 @@ import Movies from "./Movies";
 import PageNotFound from "./PageNotFound";
 
 export default function App(props) {
-    return(
-    <Router>
-        <Switch>
-        <Route exact path = "/">
-        <Home/>
-        </Route> <Route path = "/Movies">
-        <Movies/>
-        </Route> <Route path = "/404">
-        <PageNotFound/>
-        </Route> 
-        <Redirect to = "/404" >
-        </Redirect> 
-        </Switch> 
-    </Router>
+    return (
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Home />
+                </Route> <Route path="/Movies/:id">
+                    <Movies />
+                </Route> <Route path="/404">
+                    <PageNotFound />
+                </Route>
+                <Redirect to="/404" >
+                </Redirect>
+            </Switch>
+        </Router>
     )
 }
