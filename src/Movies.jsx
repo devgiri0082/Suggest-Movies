@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router";
+import { useParams } from "react-router-dom";
 
 export default function Movies(props) {
     const { id } = useParams();
@@ -13,7 +13,7 @@ export default function Movies(props) {
         let obj = await fetch(url);
         obj = await obj.json();
         setcurrentMoive(obj);
-        setLoading(false);
+        setLoading(false)
     }
     useEffect(() => {
         getMovie();
